@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarah Draves</title>
+  <meta name="description" content="Personal site for Sarah Draves" />
+  <style>
+    /* =============================
+       COLOR VARIABLES (light theme)
+       ============================= */
+    :root {
+      --bg: #ffffff;
+      --fg: #0f172a; /* main text color */
+      --muted: #475569; /* secondary text */
+      --accent: #2563eb; /* button/link color */
+      --accent-contrast: #ffffff; /* text on accent */
+      --card: #f8fafc; /* background for cards */
+      --ring: rgba(37, 99, 235, 0.35); /* focus outline */
+    }
+
+    /* =============================
+       DARK MODE COLOR VARIABLES
+       ============================= */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1220;
+        --fg: #e5e7eb;
+        --muted: #a1a1aa;
+        --accent: #60a5fa;
+        --accent-contrast: #0b1220;
+        --card: #111827;
+        --ring: rgba(96, 165, 250, 0.45);
+      }
+    }
+
+    /* Apply universal box-sizing */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    /* =============================
+       BASE BODY STYLING
+       ============================= */
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      /* Gradient background decorations */
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(99,102,241,0.08), transparent 50%),
+                  radial-gradient(1000px 500px at -10% 10%, rgba(56,189,248,0.08), transparent 50%),
+                  var(--bg);
+      color: var(--fg);
+    }
+
+    /* Wrap content to a centered column */
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* =============================
+       HEADER (name, picture, buttons)
+       ============================= */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid rgba(15,23,42,0.08);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    /* Profile picture */
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(99,102,241,0.25);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+
+    /* Name heading */
+    h1 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      line-height: 1.2;
+      margin: 0 0 6px 0;
+    }
+    /* Tagline under name */
+    .tagline {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* =============================
+       MAIN CONTENT AREA
+       ============================= */
+    main {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    /* Card box styling (e.g., About Me) */
+    .card {
+      padding: 24px;
+      background: var(--card);
+      border: 1px solid rgba(15,23,42,0.08);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    /* =============================
+       BUTTON STYLES
+       ============================= */
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 999px; /* fully rounded */
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+      will-change: transform;
+    }
+
+    .btn:focus { outline: none; box-shadow: 0 0 0 4px var(--ring); }
+
+    /* Solid accent button */
+    .btn-primary {
+      background: var(--accent);
+      color: var(--accent-contrast);
+      box-shadow: 0 8px 18px rgba(37,99,235,0.25);
+    }
+    .btn-primary:hover { transform: translateY(-1px); }
+
+    /* Outline button */
+    .btn-ghost {
+      background: transparent;
+      color: var(--fg);
+      border-color: rgba(15,23,42,0.15);
+    }
+    .btn-ghost:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,0.12); }
+
+    /* Utility: visually hidden but accessible text */
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,1px,1px); white-space: nowrap; border: 0; }
+
+    /* =============================
+       FOOTER
+       ============================= */
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 18px 0 8px;
+    }
+
+    /* =============================
+       MOBILE RESPONSIVE TWEAKS
+       ============================= */
+    @media (max-width: 560px) {
+      header { flex-direction: column; text-align: center; }
+      .avatar { width: 110px; height: 110px; }
+      .buttons { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <!-- Profile picture -->
+      <img class="avatar" src="portrait.jpg" alt="Portrait of Sarah Draves" />
+
+      <!-- Text block with name, tagline, and buttons -->
+      <div>
+        <h1>Sarah Draves</h1>
+        <p class="tagline">Astrophysics & Physics • Research‑focused</p>
+        <div class="buttons">
+          <!-- GitHub link button -->
+          <a class="btn btn-primary" href="https://github.com/USERNAME" target="_blank" rel="noopener" aria-label="GitHub profile">
+            <!-- GitHub SVG icon -->
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.57v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.08-.74.08-.74 1.22.09 1.87 1.25 1.87 1.25 1.08 1.86 2.83 1.33 3.52 1.02.11-.8.42-1.33.76-1.63-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.47-2.37 1.25-3.2-.13-.31-.54-1.55.12-3.23 0 0 1.01-.32 3.3 1.22a11.5 11.5 0 0 1 6 0c2.28-1.54 3.29-1.22 3.29-1.22.67 1.68.26 2.92.13 3.23.78.83 1.24 1.9 1.24 3.2 0 4.59-2.8 5.59-5.47 5.89.43.38.81 1.11.81 2.25v3.33c0 .31.22.69.83.57A12 12 0 0 0 12 .5Z"/></svg>
+            <span>GitHub</span>
+          </a>
+
+          <!-- CV link button -->
+          <a class="btn btn-ghost" href="cv.pdf" target="_blank" rel="noopener" aria-label="Open CV as PDF">
+            <!-- Document SVG icon -->
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm1 7V3.5L19.5 9H15Z"/></svg>
+            <span>CV</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- About Me section -->
+      <section class="card" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <p>
+          I’m an astrophysics and physics student interested in computational methods,
+          simulation, and data‑driven discovery. My work spans numerical modeling,
+          scientific software, and analysis of large observational datasets.
+        </p>
+        <p>
+          I enjoy projects at the intersection of theory and implementation—building
+          efficient tools, validating them against physical intuition, and using them to
+          answer concrete scientific questions.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer with dynamic year -->
+    <footer>
+      © <span id="year"></span> Sarah Draves
+    </footer>
+  </div>
+
+  <script>
+    // Automatically fill in the current year in the footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
