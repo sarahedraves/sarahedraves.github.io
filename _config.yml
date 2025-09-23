@@ -1,11 +1,11 @@
-### your site title here
+### Sarah E. Draves
 
-title: Your Name
-description: subtitle | affiliations | motto
+title: Sarah E. Draves
+description: Astrophysics Researcher & Computational Physics Student | CUNY New York City College of Technology
 
-baseurl: /gradfolio #name of GitHub repository
-url: "" #custom url to be used instead of GitHub repository
-email: #
+baseurl: "/" #name of GitHub repository
+url: "https://sarahedraves.github.io" #custom url to be used instead of GitHub repository
+email: sarah@draves.org #
 
 # Pagination
 paginate: 4
@@ -13,15 +13,15 @@ permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
 # Social media links in footer
-linkedin: "#"
-stackoverflow: "#"
-github: "#"
-researchgate: "#"
-orcid: "#"
-quora: "#"
-instagram: "#"
-facebook: "#"
-bluesky: "#"
+linkedin: "#sarahedraves"
+#stackoverflow: "#"
+github: "#sarahedraves"
+#researchgate: "#"
+orcid: "#0009-0003-9262-4880"
+#quora: "#"
+#instagram: "#"
+#facebook: "#"
+#bluesky: "#"
 
 # Markdown
 highlighter: rouge
