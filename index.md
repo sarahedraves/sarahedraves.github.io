@@ -12,4 +12,4 @@ data analysis, and physics coursework. I'm experienced in working with large ast
 various Python packages. I'm currently applying to physics and astronomy PhD programs with the goal of
 continuing research in observational astrophysics.
 
-Check out my CV [https://sarahedraves.github.io/cv/][here] and links to my email, LinkedIn, GitHub, and ORCID below. 
+Check out my CV [here](https://sarahedraves.github.io/cv/) and links to my email, LinkedIn, GitHub, and ORCID below. 
