@@ -13,11 +13,11 @@ permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
 # Social media links in footer
-linkedin: "#sarahedraves"
+linkedin: "sarahedraves"
 #stackoverflow: "#"
-github: "#sarahedraves"
+github: "sarahedraves"
 #researchgate: "#"
-orcid: "#0009-0003-9262-4880"
+orcid: "0009-0003-9262-4880"
 #quora: "#"
 #instagram: "#"
 #facebook: "#"
