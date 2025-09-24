@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Library of Light Curves
+title: A Library of Light Curves with TESS and K2
 description: Work with the BDNYC Group
 ---
 
