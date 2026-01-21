@@ -5,6 +5,8 @@ description: CUNY New York City College of Technology
 
 baseurl: "/" #name of GitHub repository
 url: "https://sarahedraves.github.io" #custom url to be used instead of GitHub repository
+social:
+  image: /assets/images/previewimage.png
 email: sarah@draves.org #
 
 # Pagination
